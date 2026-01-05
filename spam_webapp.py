@@ -24,7 +24,7 @@ st.set_page_config(
 
 
 loaded_model = pickle.load(open('spam_model.pkl', "rb"))
-feature_extraction = pickle.load(open('vectorizer.pkl' "rb"))
+loaded_vectorizer = pickle.load(open('vectorizer.pkl' "rb"))
 
 
 
@@ -66,7 +66,7 @@ if st.button("🔍 Analyze Email", use_container_width=True):
         st.warning("⚠️ Please enter an email message to analyze.")
     else:
         input_mail = [user_input]
-        input_mail_feature = feature_extraction.transform(input_mail)
+        input_mail_feature = loaded_vectorizer.transform(input_mail)
 
         prediction = loaded_model.predict(input_mail_feature)
         probability = loaded_model.predict_proba(input_mail_feature)
