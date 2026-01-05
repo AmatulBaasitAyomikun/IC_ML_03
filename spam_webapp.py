@@ -24,7 +24,7 @@ st.set_page_config(
 
 
 loaded_model = pickle.load(open('spam_model.pkl', "rb"))
-loaded_vectorizer = pickle.load(open('vectorizer.pkl' "rb"))
+loaded_vectorizer = pickle.load(open('vectorizer.pkl', "rb"))
 
 
 
