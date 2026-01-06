@@ -12,7 +12,7 @@ import numpy as np
 # Page Configuration
 
 st.set_page_config(
-    page_title="Spam Email Classifier",
+    page_title="Email Classifier",
     page_icon="📧",
     layout="centered"
 )
@@ -25,14 +25,14 @@ model_path = r"C:/Users/DELL PC/OneDrive/Documents/ML projects Interncred/Spam E
 vectorizer_path = r"C:/Users/DELL PC/OneDrive/Documents/ML projects Interncred/Spam Email Classifier/vectorizer.pkl"
 
 loaded_model = pickle.load(open(model_path, "rb"))
-feature_extraction = pickle.load(open(vectorizer_path, "rb"))
+loaded_vectorizer = pickle.load(open(vectorizer_path, "rb"))
 
 
 # App Header
 
 
 st.markdown(
-    "<h1 style='text-align: center;'>📧 Spam Email Classifier</h1>",
+    "<h1 style='text-align: center;'>📧Email Classifier</h1>",
     unsafe_allow_html=True
 )
 
@@ -65,7 +65,7 @@ if st.button("🔍 Analyze Email", use_container_width=True):
         st.warning("⚠️ Please enter an email message to analyze.")
     else:
         input_mail = [user_input]
-        input_mail_feature = feature_extraction.transform(input_mail)
+        input_mail_feature = loaded_vectorizer.transform(input_mail)
 
         prediction = loaded_model.predict(input_mail_feature)
         probability = loaded_model.predict_proba(input_mail_feature)

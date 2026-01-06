@@ -13,7 +13,7 @@ import numpy as np
 # Page Configuration
 
 st.set_page_config(
-    page_title="Spam Email Classifier",
+    page_title="Email Classifier",
     page_icon="📧",
     layout="centered"
 )
@@ -32,7 +32,7 @@ loaded_vectorizer = pickle.load(open('vectorizer.pkl', "rb"))
 # App Header
 
 st.markdown(
-    "<h1 style='text-align: center;'>📧 Spam Email Classifier</h1>",
+    "<h1 style='text-align: center;'>📧Email Classifier</h1>",
     unsafe_allow_html=True
 )
 
