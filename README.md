@@ -120,14 +120,9 @@ Highlights the importance of feature engineering in NLP tasks
 
 
 
-📁 Project Structure
-├── Spam_Email_Classifier.ipynb
-├── README.md
-└── dataset/
-    └── spam.csv
-
-
 🎥 Demo
+
+
 A short video walkthrough of the project is available on my LinkedIn, showing:
 
 
@@ -161,6 +156,8 @@ Add confidence scores to predictions
 
 
 🤝 Acknowledgement
+
+
 This project was completed as part of my Machine Learning Internship with InternCred, which emphasizes hands-on learning and real-world application of data science concepts.
 
 📬 Contact
